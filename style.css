@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(images/arka\ plan1.jpg);
+    background-size: cover;
+}
+
+a {
+    color: cadetblue;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+header{
+    height: 100px;
+    border-bottom: 5px solid rgb(206, 204, 204);
+}
+
+/* header start */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    column-gap: 30px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: overline;
+    transition: color 0.25s ease;
+    background-color: forestgreen;
+    padding: 6px 12px;
+    border-radius: 56px;
+    font-style: normal;
+}
+
+nav ul li a:hover{
+    color: cadetblue;
+}
+
+nav .menu{
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+/* header end */
+
+/* responsive start */
+
+@media(max-width:576px){
+    .container{
+        width: 100%;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .menu ul {
+        column-gap: 20px;
+    }
+}
+/* responsive end */
+
+.box{
+    width: 450px;
+    background: darkcyan;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: black;
+    font-family: sans-serif;
+}
+
+.box img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+
+.box img:hover{
+    transform: scale(0.9);
+}
+
+.box h1{
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+
+.box h5{
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.box p{
+    text-align: justify;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.box li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+
+.box li a{
+    color: black;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+}
+
+.box li a:hover{
+    color: aquamarine;
+}
+
+@media(max-width:576px){
+    .box{
+        width: 100%;
+        padding-left: 6px;
+        padding-right: 6px;  
+    }
+
+    .box ul{
+        column-gap: 20px;
+    }
+}
+
+
+* .contact{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body .contact {
+    min-height: 70vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: auto;
+}
+
+.contact{
+    width: 85%;
+    background: darkcyan;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .topic-text{
+    display: flow-root;
+    width: 75%;
+    margin-left: 25px;
+    font-size: 23px;
+    font-weight: 600;
+    color: black;
+}
+
+.content .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.input-box input,
+.input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: white;
+    border-radius: 15px;
+    padding: 0 15px;
+    resize: none;
+}
+
+.message-box{
+    min-height: 110%;
+}
+
+.input-box textarea{
+    padding-top: 20px;
+}
+
+.content .button{
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.button input{
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background: darkcyan;
+}
+
+.content h6{
+    left: 75px;
+    color: black;
+    font-style: italic;
+}
+
+@media (max-width: 950px) {
+    .contact{
+        width: 90%;
+        padding: 30px 40px 40px 35px;
+    }
+
+    .content .topic-text{
+        width: 75%;
+        margin-left: 75%;
+    }
+}
+
+@media (max-width: 820px) {
+    .contact{
+        margin: 40px 0;
+        height: 100%;
+    }
+
+    .content{
+        flex-direction: column-reverse;
+    }
+
+    .topic-text{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .topic-text::before{
+        width: 100%;
+        display: none;
+        margin-left: 0;
+    }
+}
